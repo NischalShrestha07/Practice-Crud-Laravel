@@ -46,9 +46,9 @@
 
                         <td>
                             {{-- Action ko lagi yo aba --}}
-                            <a href="{{ route('product.show', $product) }}" class="btn btn-info btn-sm">View</a>
-                            <a href="{{ route('product.edit', $product) }}" class="btn btn-info btn-sm">Edit</a>
-                            <form action="{{ route('products.destroy', $product) }} " method="POST"
+                            <a href="{{ route('products.show', $item) }}" class="btn btn-info btn-sm">View</a>
+                            <a href="{{ route('products.edit', $item) }}" class="btn btn-info btn-sm">Edit</a>
+                            <form action="{{ route('products.destroy', $item) }} " method="POST"
                                 style="display: inline" style="display: inline">
                                 @csrf
                                 @method('DELETE')

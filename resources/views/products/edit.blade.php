@@ -18,7 +18,8 @@
             @method('PUT')
             <div class="form-group">
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}">
+                <input type="text" class="form-control" id="name" name="name"
+                    value="{{ old('name', $product->name) }}">
 
                 @error('name')
                     <span class="text-danger">{{ $message }}</span>
@@ -27,7 +28,7 @@
             <div class="form-group">
                 <label for="name">Description</label>
                 <input type="text" class="form-control" id="description" name="description"
-                    value="{{ old('description') }}">
+                    value="{{ old('description', $product->description) }}">
 
                 @error('description')
                     <span class="text-danger">{{ $message }}</span>
@@ -35,7 +36,8 @@
             </div>
             <div class="form-group">
                 <label for="name">Price</label>
-                <input type="text" class="form-control" id="price" name="price" value="{{ old('price') }}">
+                <input type="text" class="form-control" id="price" name="price"
+                    value="{{ old('price', $product->price) }}">
 
                 @error('price')
                     <span class="text-danger">{{ $message }}</span>

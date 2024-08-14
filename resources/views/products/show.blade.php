@@ -14,16 +14,14 @@
     <div class="container">
         <h1>Products Details</h1>
         <dl class="row">
-            @foreach ($product as $item)
-                <dt class="col-sm-3">Name</dt>
-                <dd class="col-sm-9">{{ $product->name }}</dd>
+            <dt class="col-sm-3">Name</dt>
+            <dd class="col-sm-9">{{ $product->name }}</dd>
 
-                <dt class="col-sm-3">Description</dt>
-                <dd class="col-sm-9">{{ $product->description }}</dd>
+            <dt class="col-sm-3">Description</dt>
+            <dd class="col-sm-9">{{ $product->description }}</dd>
 
-                <dt class="col-sm-3">Price</dt>
-                <dd class="col-sm-9">{{ $product->price }}</dd>
-            @endforeach
+            <dt class="col-sm-3">Price</dt>
+            <dd class="col-sm-9">{{ $product->price }}</dd>
         </dl>
         <a href="{{ route('products.edit', $product) }}" class="btn btn-warning">Edit</a>
         <form action="{{ route('products.destroy', $product) }}" method="POST" style="display: inline">
